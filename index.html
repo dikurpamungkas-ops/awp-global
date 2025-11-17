@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Altius Wealth Partners</title>
+    <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+	<link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!-- Loading animation -->
+<div class="loading-overlay">
+	<div class="loading-squircle"></div>
+</div>
+
+<!-- Animated background -->
+<div class="hero-bg"></div>
+<div class="fog-container">
+    <div class="fog-1 fog-img"></div>
+    <div class="fog-2 fog-img"></div>
+</div>
+<!-- Floating creative elements -->
+<div class="floating-elements">
+	<div class="floating-shape"></div>
+	<div class="floating-shape"></div>
+	<div class="floating-shape"></div>
+</div>
+
+<div class="hero-container">
+	<!-- Header -->
+	 <header class="hide">
+      <nav class="nav">
+        <a href="index.html"><img src="img/logo.png" alt="Altius" class="logo"></a>
+        <ul>
+          <li>
+            <a href="javascript:void(0)" onclick="scrollToSection('services')">Services</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="startProject()">Contact</a>
+          </li>
+		  <li>
+            <a></a>
+          </li>
+		</ul>
+      </nav>
+    </header>
+	<!--<header class="header">
+		<div class="logo"><img src="img/logo.png" alt="Altius" width="150px"></div>
+		<nav class="nav">
+			<a href="javascript:void(0)" onclick="scrollToSection('services')">Services</a>
+			<a href="about.html">About</a>
+			<a href="javascript:void(0)" onclick="startProject()">Contact</a>
+		</nav>
+	</header>-->
+
+
+	<!-- Hero content -->
+	 <div class="home-content">
+        <div class="logo"><img src="img/logo.png" alt="Altius" width="450px"></div>
+              <p>
+                At Altius Wealth Partners, we guide individuals, families, and businesses toward their most ambitious financial goals through expert advice, innovative strategies, and unwavering integrity.
+              </p>
+              <div class="social-grid">
+                <a href="https://x.com/awpglobal?s=11" class="social-link" aria-label="Twitter">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/altius-wealth-partners" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                            <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/awpglobal?igsh=MWk5N3U5NThkZHpieQ==" class="social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.071 1.173.057 1.748.243 2.148.402.404.16.747.373 1.082.709.336.335.549.678.709 1.082.16.4.345.975.402 2.148.059 1.266.071 1.646.071 4.85s-.012 3.584-.071 4.85c-.057 1.173-.243 1.748-.402 2.148-.16.404-.373.747-.709 1.082-.335.336-.678.549-1.082.709-.4.16-.975.345-2.148.402-1.266.059-1.646.071-4.85.071s-3.584-.012-4.85-.071c-1.173-.057-1.748-.243-2.148-.402-.404-.16-.747-.373-1.082-.709-.336-.335-.549-.678-.709-1.082-.16-.4-.345-.975-.402-2.148-.059-1.266-.071-1.646-.071-4.85s.012-3.584.071-4.85c.057-1.173.243-1.748.402-2.148.16-.404.373-.747.709-1.082.335-.336.678-.549 1.082-.709.4-.16.975-.345 2.148-.402C8.416 2.175 8.796 2.163 12 2.163zm0-2.163c-3.266 0-3.693.012-4.996.072-1.267.061-2.115.256-2.873.559-.757.303-1.4.728-2.043 1.371-.643.643-1.068 1.286-1.371 2.043-.303.758-.498 1.606-.559 2.873-.06 1.303-.072 1.729-.072 4.996s.012 3.693.072 4.996c.061 1.267.256 2.115.559 2.873.303.757.728 1.4 1.371 2.043.643.643 1.286 1.068 2.043 1.371.758.303 1.606.498 2.873.559 1.303.06 1.729.072 4.996.072s3.693-.012 4.996-.072c1.267-.061 2.115-.256 2.873-.559.757-.303 1.4-.728 2.043-1.371.643-.643 1.068-1.286 1.371-2.043.303-.758.498-1.606.559-2.873.06-1.303.072-1.729.072-4.996s-.012-3.693-.072-4.996c-.061-1.267-.256-2.115-.559-2.873-.303-.757-.728-1.4-1.371-2.043-.643-.643-1.286-1.068-2.043-1.371-.758-.303-1.606-.498-2.873-.559C15.693 2.175 15.267 2.163 12 2.163zm0 6.609c-2.875 0-5.21 2.335-5.21 5.21s2.335 5.21 5.21 5.21 5.21-2.335 5.21-5.21-2.335-5.21-5.21-5.21zm0 8.521c-1.821 0-3.311-1.49-3.311-3.311s1.49-3.311 3.311-3.311 3.311 1.49 3.311 3.311-1.49 3.311-3.311 3.311zm5.338-12.222c-.887 0-1.608.721-1.608 1.608s.721 1.608 1.608 1.608 1.608-.721 1.608-1.608-.721-1.608-1.608-1.608z"/>
+                    </svg>
+                </a>
+            	</div>
+            </div>
+	
+	<!--<div class="hero-content">
+		<section class="about-section" id="about">
+			<img src="img/logo2.png" width="300px">
+		<h1 class="hero-title">
+			<span class="title-main">ALTIUS</span>
+			<span class="title-sub">Wealth Partners</span>
+		</h1>
+		<p class="hero-tagline">Elevate Your Wealth. Achieve Your Ambitions</p>
+		<p class="hero-description">
+			At Altius Wealth Partners, we guide individuals, families, and businesses toward their most ambitious financial goals through expert advice, innovative strategies, and unwavering integrity. 
+		</p>
+		<div class="cta-buttons">
+			<button class="btn btn-primary" onclick="scrollToPortfolio()">About Us</button>
+			<button class="btn btn-secondary" onclick="startProject()">Contact Us</button>
+		</div>
+		</section>
+	</div>!-->
+	
+
+	<!-- Portfolio section -->
+	<section class="portfolio-section" id="portfolio">
+		<h2 class="section-title">Our Services at a Glance</h2>
+
+		<div class="portfolio-grid">
+			<div class="portfolio-item" onclick="openProject(1)">
+				<div class="portfolio-image project-1">
+					<div class="portfolio-overlay">
+						<div class="view-project">View Services</div>
+					</div>
+				</div>
+				<div class="portfolio-content">
+					<h3 class="project-title">Private Wealth Management</h3>
+					<p class="project-category">Building and preserving wealth</p>
+					<p class="project-description">
+						Customized strategies to grow, protect, and transfer your wealth across generations.
+						Building and preserving wealth requires careful planning, strategic thinking, and expert guidance.
+						We take a holistic approach, ensuring every decision contributes to your long-term prosperity and peace of mind.
+					</p>
+				</div>
+			</div>
+
+			<div class="portfolio-item" onclick="openProject(2)">
+				<div class="portfolio-image project-2">
+					<div class="portfolio-overlay">
+						<div class="view-project">View Services</div>
+					</div>
+				</div>
+				<div class="portfolio-content">
+					<h3 class="project-title">Investment Advisory</h3>
+					<p class="project-category">Make informed investment decisions with confidence</p>
+					<p class="project-description">
+						Expert insights and portfolio management aligned with your financial goals and risk tolerance.
+					</p>
+				</div>
+			</div>
+
+			<div class="portfolio-item" onclick="openProject(3)">
+				<div class="portfolio-image project-3">
+					<div class="portfolio-overlay">
+						<div class="view-project">View Services</div>
+					</div>
+				</div>
+				<div class="portfolio-content">
+					<h3 class="project-title">Trade Finance</h3>
+					<p class="project-category">Navigate international trade with ease</p>
+					<p class="project-description">
+						Strategic solutions for international trade and cross-border transactions.
+						Whether you're expanding into new markets or optimizing existing trade relationships, our expertise ensures smooth, secure transactions.
+					</p>
+				</div>
+			</div>
+
+			<div class="portfolio-item" onclick="openProject(4)">
+				<div class="portfolio-image project-4">
+					<div class="portfolio-overlay">
+						<div class="view-project">View Services</div>
+					</div>
+				</div>
+				<div class="portfolio-content">
+					<h3 class="project-title">Corporate Advisory</h3>
+					<p class="project-category">Strengthen your business foundation with strategic guidance</p>
+					<p class="project-description">
+						Company structuring, retirement planning, and market research insights for business success.
+						We partner with business owners and executives to build resilient, thriving organizations positioned for future success.
+					</p>
+				</div>
+			</div>
+
+			<!--<div class="portfolio-item" onclick="openProject(5)">
+				<div class="portfolio-image project-5">
+					<div class="portfolio-overlay">
+						<div class="view-project">View Project</div>
+					</div>
+				</div>
+				<div class="portfolio-content">
+					<h3 class="project-title">AR Experience</h3>
+					<p class="project-category">Interactive Media</p>
+					<p class="project-description">
+						Augmented reality product showcase allowing customers
+						to visualize products in their space.
+					</p>
+				</div>
+			</div>
+
+			<div class="portfolio-item" onclick="openProject(6)">
+				<div class="portfolio-image project-6">
+					<div class="portfolio-overlay">
+						<div class="view-project">View Project</div>
+					</div>
+				</div>
+				<div class="portfolio-content">
+					<h3 class="project-title">SaaS Dashboard</h3>
+					<p class="project-category">Product Design</p>
+					<p class="project-description">
+						Comprehensive analytics dashboard with real-time data
+						visualization and custom reporting tools.
+					</p>
+				</div>
+			</div>!-->
+		</div>
+	</section>
+
+	<!-- Stats section -->
+	<section class="stats-section">
+		<h2 style="font-size: 2rem; margin-bottom: 10px; color: #fff;">Trusted by Industry Leaders</h2>
+		<p style="color: #fff; margin-bottom: 20px;">Delivering exceptional results since 2020</p>
+
+		<div class="stats-grid">
+			<div class="stat-item">
+				<span class="stat-number" data-target="150">0</span>
+				<span class="stat-label">Projects Completed</span>
+			</div>
+			<div class="stat-item">
+				<span class="stat-number" data-target="98">0</span>
+				<span class="stat-label">Client Satisfaction</span>
+			</div>
+			<div class="stat-item">
+				<span class="stat-number" data-target="5">0</span>
+				<span class="stat-label">Years Experience</span>
+			</div>
+			<div class="stat-item">
+				<span class="stat-number" data-target="25">0</span>
+				<span class="stat-label">Team Members</span>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- The Perfect Footer -->
+    <footer id="proFooter" role="contentinfo">
+        <div class="footer-inner">
+            <!-- Top Section with Main Content -->
+            <div class="footer-main">
+                <div class="footer-section footer-brand">
+                    <div class="brand-identity">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#007AFF;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#5856D6;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="24" cy="24" r="22" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
+                            <path d="M15 24 L21 30 L33 18" fill="none" stroke="url(#logoGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="brand-text">
+                            <img src="img/logo.png" width="150">
+                            <p class="brand-tagline">Your Trusted Partner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="footer-section footer-nav" aria-label="Footer Navigation">
+                    <h3 class="footer-title">Explore</h3>
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('services')" class="nav-link">Services</a></li>
+                        <li><a href="javascript:void(0)" onclick="startProject()" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-section footer-resources">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">Documentation</a></li>
+                        <li><a href="#" class="nav-link">Support Center</a></li>
+                        <li><a href="#" class="nav-link">API Reference</a></li>
+                        <li><a href="#" class="nav-link">Status Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section footer-contact">
+                    <h3 class="footer-title">Get in Touch</h3>
+                    <address class="contact-info">
+                        <a href="mailto:hello@company.com" class="contact-link">
+                            <svg class="contact-icon" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <span>info@awp.global</span>
+                        </a>
+                        <a href="tel:+15551234567" class="contact-link">
+                            <svg class="contact-icon" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <span>+62 21 5032-2657</span>
+                        </a>
+                        <div class="contact-link">
+                            <svg class="contact-icon" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Treasury Tower, 28th C Floor SCBD, Jakarta, Indonesia.</span>
+                        </div>
+						<div class="contact-link">
+                            <svg class="contact-icon" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>The Catalyst, GF, lot 40 Silicon Avenue, Ebene, Mauritius.</span>
+                        </div>
+						<div class="contact-link">
+                            <svg class="contact-icon" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>GoldenMile, Building 4 M Floor, Office 13 Palm Jumeirah, Dubai, UAE.</span>
+                        </div>
+                    </address>
+                </div>
+
+                <div class="footer-section footer-connect">
+                    <h3 class="footer-title">Connect</h3>
+                    <div class="social-grid">
+                        <a href="https://x.com/awpglobal?s=11" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/altius-wealth-partners" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/awpglobal?igsh=MWk5N3U5NThkZHpieQ==" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.071 1.173.057 1.748.243 2.148.402.404.16.747.373 1.082.709.336.335.549.678.709 1.082.16.4.345.975.402 2.148.059 1.266.071 1.646.071 4.85s-.012 3.584-.071 4.85c-.057 1.173-.243 1.748-.402 2.148-.16.404-.373.747-.709 1.082-.335.336-.678.549-1.082.709-.4.16-.975.345-2.148.402-1.266.059-1.646.071-4.85.071s-3.584-.012-4.85-.071c-1.173-.057-1.748-.243-2.148-.402-.404-.16-.747-.373-1.082-.709-.336-.335-.549-.678-.709-1.082-.16-.4-.345-.975-.402-2.148-.059-1.266-.071-1.646-.071-4.85s.012-3.584.071-4.85c.057-1.173.243-1.748.402-2.148.16-.404.373-.747.709-1.082.335-.336.678-.549 1.082-.709.4-.16.975-.345 2.148-.402C8.416 2.175 8.796 2.163 12 2.163zm0-2.163c-3.266 0-3.693.012-4.996.072-1.267.061-2.115.256-2.873.559-.757.303-1.4.728-2.043 1.371-.643.643-1.068 1.286-1.371 2.043-.303.758-.498 1.606-.559 2.873-.06 1.303-.072 1.729-.072 4.996s.012 3.693.072 4.996c.061 1.267.256 2.115.559 2.873.303.757.728 1.4 1.371 2.043.643.643 1.286 1.068 2.043 1.371.758.303 1.606.498 2.873.559 1.303.06 1.729.072 4.996.072s3.693-.012 4.996-.072c1.267-.061 2.115-.256 2.873-.559.757-.303 1.4-.728 2.043-1.371.643-.643 1.068-1.286 1.371-2.043.303-.758.498-1.606.559-2.873.06-1.303.072-1.729.072-4.996s-.012-3.693-.072-4.996c-.061-1.267-.256-2.115-.559-2.873-.303-.757-.728-1.4-1.371-2.043-.643-.643-1.286-1.068-2.043-1.371-.758-.303-1.606-.498-2.873-.559C15.693 2.175 15.267 2.163 12 2.163zm0 6.609c-2.875 0-5.21 2.335-5.21 5.21s2.335 5.21 5.21 5.21 5.21-2.335 5.21-5.21-2.335-5.21-5.21-5.21zm0 8.521c-1.821 0-3.311-1.49-3.311-3.311s1.49-3.311 3.311-3.311 3.311 1.49 3.311 3.311-1.49 3.311-3.311 3.311zm5.338-12.222c-.887 0-1.608.721-1.608 1.608s.721 1.608 1.608 1.608 1.608-.721 1.608-1.608-.721-1.608-1.608-1.608z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p class="copyright">&copy; <span class="">2020</span> Altius Wealth Partners. All rights reserved.</p>
+                    <p class="credit">
+                        Designed by <a href="" target="_blank" rel="noopener" class="credit-link">Pamungkas</a>
+                    </p>
+                </div>
+                <nav class="legal-nav" aria-label="Legal">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <span class="separator" aria-hidden="true">·</span>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                    <span class="separator" aria-hidden="true">·</span>
+                    <a href="#" class="legal-link">Cookie Policy</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script  src="script.js"></script>
+
+  </body>
+  
+</html>
