@@ -231,7 +231,7 @@ header ul a {
 	}
 	.hero-bg{
 		background-attachment: scroll;
-		background-size: auto 100%;
+		background-size: auto 60%;
 		background-position: center bottom;
 		transform: scale(1);
 	}
