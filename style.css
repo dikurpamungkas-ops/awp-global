@@ -47,46 +47,39 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	/*background: radial-gradient(
-			circle at 15% 30%,
-			rgba(255, 71, 87, 0.3) 0%,
-			transparent 50%
-		),
-		radial-gradient(
-			circle at 85% 20%,
-			rgba(255, 209, 102, 0.3) 0%,
-			transparent 50%
-		),
-		radial-gradient(
-			circle at 60% 80%,
-			rgba(106, 90, 255, 0.3) 0%,
-			transparent 50%
-		),
-		radial-gradient(
-			circle at 30% 70%,
-			rgba(46, 213, 115, 0.3) 0%,
-			transparent 50%
-		),
-		linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #2d1b4e 100%);
-	z-index: -2;*/
+	height: 100vh;
 	background-image: url('img/background1.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	-webkit-animation: backgroundShift 20s ease-in-out infinite;
 	        animation: backgroundShift 20s ease-in-out infinite;
+	z-index: -1;
 }
 
+.hero-bg::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+
 @-webkit-keyframes backgroundShift {
-	0%,
+	0% { transform: scale(1) rotate(0deg);}
 	100% {
 		transform: scale(1) rotate(0deg);
 	}
 	50% {
-		transform: scale(1.1) rotate(1deg);
+		transform: scale(1.1) rotate(0deg);
 	}
 }
 
 @keyframes backgroundShift {
-	0%,
+	0% {transform: scale(1) rotate(0deg);}
 	100% {
 		transform: scale(1) rotate(0deg);
 	}
@@ -164,107 +157,6 @@ header ul a {
 	color: #fff;
 }
 
-.hamburger {
-  padding-left: 1.5rem;
-}
-
-.hamburger a {
-  padding: 0;
-  width: 37px;
-  height: 37px;
-  display: flex;
-  border-radius: 50%;
-  background-color: rgba(115, 115, 115, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  justify-content: center;
-  align-items: center;
-}
-
-.hamburger .bar {
-  position: relative;
-  width: 52%;
-  height: 1.3px;
-  background-color: #fff;
-  border-radius: 2px;
-}
-
-.hamburger .bar::before,
-.hamburger .bar::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 100%;
-  background-color: inherit;
-  border-radius: 2px;
-}
-
-.hamburger .bar::before {
-  top: -4.5px;
-}
-
-.hamburger .bar::after {
-  top: 4.5px;
-}
-
-
-/*.header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 0;
-	margin-bottom: 40px;
-	opacity: 0;
-	-webkit-animation: slideDown 1s ease-out 0.3s forwards;
-	        animation: slideDown 1s ease-out 0.3s forwards;
-}
-
-
-.logo {
-	font-size: 1.8rem;
-	font-weight: 900;
-	background: linear-gradient(135deg, #ff4757, #ff8c42, #6a5acd);
-	background-image: url('img/logo.png');
-	width: 200px;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-}
-
-.nav {
-	display: flex;
-	gap: 30px;
-	list-style: none;
-}
-
-.nav a {
-	color: #051C2C;
-	text-decoration: none;
-	font-weight: 500;
-	transition: all 0.3s ease;
-	position: relative;
-}
-
-.nav a:hover {
-	color: #fff;
-}
-
-.nav a::after {
-	content: "";
-	position: absolute;
-	bottom: -5px;
-	left: 0;
-	width: 0;
-	height: 2px;
-	background: linear-gradient(90deg, #fff, #051C2C);
-	transition: width 0.3s ease;
-}
-
-.nav a:hover::after {
-	width: 100%;
-}*/
 
 @-webkit-keyframes slideDown {
 	from {
@@ -290,6 +182,12 @@ header ul a {
 
 /* Hero content */
 .hero-content {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 60px 20px 30px;
 	text-align: center;
 	margin-bottom: 60px;
 	margin-top: 500px;
@@ -300,6 +198,50 @@ header ul a {
 	-webkit-animation: fadeInUp 1s ease-out 0.8s forwards;
 	        animation: fadeInUp 1s ease-out 0.8s forwards;
 }
+
+/* Tablet landscape and  below */
+@media (max-width: 1024px) {
+	.hero-content{
+		padding: 50px 20px 30px;
+	}
+}
+
+/* Tablet Potrait*/
+@media (max-width: 768px) {
+	.hero-content{
+		padding: 40px 15px 30px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+	.hero-content{
+		padding: 30px 10px 20px;
+	}
+	.hero-bg{
+		background-attachment: scroll;
+		-webkit-animation: none;
+		animation: none;
+		transform: scale(1.1);
+	}
+}
+
+/* Landscape orientation on mobile*/
+@media (max-height: 500px) and (orientation: landscape) {
+	.hero-content{
+		padding: 20px;
+		min-height: auto;
+	}
+}
+
+/* Prefer reduced motion untuk aksesibility*/
+@media (prefers-reduced-motion: reduce) {
+	.hero-bg{
+		-webkit-animation: none;
+		animation: none;
+	}
+}
+
 
 .hero-title {
 	font-size: clamp(3rem, 8vw, 7rem);
@@ -769,7 +711,7 @@ header ul a {
 		font-size: 2.5rem;
 	}
 
-	.floating-elements {
+	.fog-container {
 		display: none;
 	}
 }
